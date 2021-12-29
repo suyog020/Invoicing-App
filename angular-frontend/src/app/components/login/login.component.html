@@ -1,0 +1,24 @@
+<mat-card class="card text-center mt mb">
+    <mat-card-title style="margin-top: 30px;">Sign In</mat-card-title>
+    <mat-card-content>
+        <form (ngSubmit)="onSubmit()" class="text-center">
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input required name="username" [(ngModel)]="credentials.username" type="text" matInput>
+            </mat-form-field>
+
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input required name="password" [(ngModel)]="credentials.password" type="password" matInput>
+            </mat-form-field>
+
+            <div>
+                <button type="submit" mat-raised-button color="primary">Login</button>
+            </div>
+
+            <div class="mt" style="margin-bottom: 30px;">
+                <a mat-raised-button color="primary" routerLink="/signup">Create Account</a>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

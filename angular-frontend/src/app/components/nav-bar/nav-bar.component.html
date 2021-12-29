@@ -1,0 +1,109 @@
+<!-- <mat-toolbar *ngIf="loggedIn" color="primary">
+    <span>Invoicing App</span>
+    <span><a routerLink="/dashboard" style="margin-left: 70px;">Dashboard</a></span>
+    <span><a routerLink="/customers" style="margin-left: 70px;">Customers</a></span>
+    <span><a routerLink="/invoice" style="margin-left: 70px;">Invoice</a></span>
+    <span><a routerLink="/createInvoice" style="margin-left: 70px;">Create</a></span>
+    <span class="example-spacer"></span>
+    <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
+    <a *ngIf="loggedIn" mat-icon-button>{{loginService.getUser().name}}</a>
+    <a *ngIf="loggedIn" mat-icon-button (click)="logoutUser()">Logout</a>
+</mat-toolbar>  -->
+
+<nav *ngIf="loggedIn" class="navbar navbar-expand-lg navbar-light bg-primary" style="color: white;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="color: white;">Invoicing App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-left: 70px;">
+          <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item" style="margin-left: 40px;">
+          <a class="nav-link active" aria-current="page" href="/customers">Customer</a>
+        </li>
+        <li class="nav-item" style="margin-left: 40px;">
+          <a class="nav-link active" aria-current="page" href="/invoice">Invoice</a>
+        </li>
+        <li class="nav-item" style="margin-left: 40px;">
+          <a class="nav-link active" aria-current="page" href="/createInvoice">Create</a>
+        </li>
+        </ul>
+      <form class="d-flex">
+        <a *ngIf="!loggedIn" mat-icon-button routerLink="/login">Login</a>
+        <a *ngIf="loggedIn" mat-icon-button style="margin-right: 20px;">{{loginService.getUser().name}}</a>
+        <a *ngIf="loggedIn" mat-icon-button (click)="logoutUser()" style="margin-right: 40px;">Logout</a>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-toolbar *ngIf="loggedIn" color="primary">
+    <button mat-icon-button (click)="onToggleSidenav()" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <a [routerLink]="['/dashboard']" mat-button>
+        <h1>Invoicing App</h1>
+    </a>
+    <div fxFlex fxLayout fxLayoutAlign="end">
+        <div fxHide.lt-md>
+            <a [routerLink]="['/dashboard']" mat-button>Dashboard</a>
+            <a [routerLink]="['/customers']" mat-button>Customers</a>
+            <a [routerLink]="['/invoice']" mat-button>Invoices</a>
+            <a [routerLink]="['/createInvoice']" mat-button>Create</a>
+        </div>
+    </div>
+</mat-toolbar> -->
+<!-- <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+      <mat-toolbar color="primary"> <span>Dashboard</span></mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item [routerLink]="['/dashboard']" routerLinkActive="router-link-active"><i class="material-icons">
+            dashboard
+          </i>Dashboard</a>
+        <a mat-list-item [routerLink]="['/customer']" routerLinkActive="router-link-active"><i class="material-icons">
+          list_alt
+          </i>Table</a>
+        <a mat-list-item [routerLink]="['/invoice']" routerLinkActive="router-link-active"><i class="material-icons">
+          toc
+          </i>Tree</a>
+        <a mat-list-item [routerLink]="['/createInvoice']" routerLinkActive="router-link-active"><i class="material-icons">
+          drag_indicator
+          </i>Drag & Drop</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Home</span>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container> -->
