@@ -1,0 +1,97 @@
+.invoice-card{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+.mat-card-title{
+    text-align: right;
+    margin-bottom: 25px;
+}
+.mat-card-subtitle{
+    text-align: right;
+}
+
+.mat-form-field{
+
+}
+
+.card-header-left{
+    width: 70%;
+    margin-left: 5%;
+}
+.card-header-right{
+    width: 30%;
+}
+.card-left-date{
+    width: 40%;
+    margin-left: 5%;
+}
+.card-mid-date{
+    width: 40%;
+}
+.card-right-date{
+    margin-right: 5%;
+}
+.tax-discount{
+    margin-left: 5%;
+    margin-top: 5%;
+    display: flex;
+}
+.tax{
+    width: 30%;
+}
+.discount{
+    width: 30%;
+}
+table{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+.table-title {        
+    padding-bottom: 15px;
+    background: #435d7d;
+    color: #fff;
+    padding: 16px 30px;
+    margin: -20px -25px 10px;
+    border-radius: 3px 3px 0 0;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+}
+.table-title h2 {
+    margin: 5px 0 0;
+    font-size: 24px;
+}
+.table-title .btn-group {
+    float: right;
+}
+.table-title .btn {
+    color: #fff;
+    float: right;
+    font-size: 13px;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+}
+.table-title .btn i {
+    float: left;
+    font-size: 21px;
+    margin-right: 5px;
+}
+
+.mat-column-Item {
+    width: 40%;
+}
+.mat-column-Quantity {
+    width: 15%;
+}
+.mat-column-Price {
+    width: 15%;
+}
+.mat-column-Amount {
+    width: 15%;
+}

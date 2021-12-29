@@ -1,0 +1,21 @@
+<div class="dialog">
+    <h2 mat-dialog-title>Add New Item</h2>
+    <form class="mat-dialog-content" (ngSubmit)="onSubmit()">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Item Name</mat-label>
+            <input required name="name" [(ngModel)]="item.name" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Quantity</mat-label>
+            <input required name="quantity" [(ngModel)]="item.quantity" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Price</mat-label>
+            <input required name="price" [(ngModel)]="item.price" type="text" matInput>
+        </mat-form-field>
+        <div class="mt" style="margin-bottom: 30px;">
+            <button type="submit" mat-raised-button color="primary">Add Item</button>
+            <button style="margin-left:10px;" mat-raised-button (click)="onNoClick()" tabindex="-1" color="accent">Cancel</button>
+        </div>
+    </form>
+</div>

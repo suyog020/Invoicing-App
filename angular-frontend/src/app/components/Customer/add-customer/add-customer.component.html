@@ -1,0 +1,25 @@
+<div class="dialog">
+    <h2 mat-dialog-title>Add New Customer</h2>
+    <form class="mat-dialog-content">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Name</mat-label>
+            <input required name="name" [(ngModel)]="credentials.name" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input required name="email" [(ngModel)]="credentials.email" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Address</mat-label>
+            <input required name="address" [(ngModel)]="credentials.address" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input required name="mobile" [(ngModel)]="credentials.mobile" type="text" matInput>
+        </mat-form-field>
+        <div class="mt" style="margin-bottom: 30px;">
+            <button type="submit" mat-raised-button (click)="onSubmit()" color="primary">Add Customer</button>
+            <button style="margin-left:10px;" mat-raised-button (click)="onNoClick()" tabindex="-1" color="accent">Cancel</button>
+        </div>
+    </form>
+</div>

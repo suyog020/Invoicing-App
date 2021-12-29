@@ -1,0 +1,106 @@
+<div id="pdfTable" #pdfTable>
+<mat-card class="invoice-card">
+    <mat-card-title>Invoice</mat-card-title>
+    <mat-card-subtitle>Invoice : 12345</mat-card-subtitle>
+    <hr>
+    <div style="display: flex;">
+        <div class="card-header-left">
+            <h2>Bill To</h2>
+            <div class="customerSelection">
+                <h3 style="font-weight: bold;">{{client.name}}</h3>
+                <p>{{client.address}}</p>
+                <p>{{client.email}}</p>
+                <p>{{client.mobile}}</p>
+            </div>
+        </div>
+
+        <div class="card-header-right">
+            <h2>Bill From</h2>
+            <div>
+                <h3 style="font-weight: bold;">{{user.name}}</h3>
+                <p>{{user.email}}</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <div style="display: flex;">
+        <div class="card-left-date">
+            <h2>Bill Date</h2>
+            <div>
+              <p> {{billDate | date: 'dd/MM/yyyy'}} </p>
+            </div>
+        </div>
+        <div class="card-mid-date">
+            <h2>Bill Due Date</h2>
+            <div>
+                <p> {{billDueDate | date: 'dd/MM/yyyy'}} </p>
+            </div>
+        </div>
+        <div class="card-right-date">
+            <h2>Status</h2>
+            <div>
+            <p>{{status}}</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="table-title">
+        <div class="row">
+            <div class="col-xs-6">
+                <h2>Items</h2>
+            </div>
+        </div>
+    </div>
+    
+    <table mat-table [dataSource]="items" class="mat-elevation-z8">
+        <ng-container matColumnDef="Item">
+          <th mat-header-cell *matHeaderCellDef> Item </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="Quantity">
+          <th mat-header-cell *matHeaderCellDef> Quantity </th>
+          <td mat-cell *matCellDef="let element"> {{element.quantity}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Price">
+            <th mat-header-cell *matHeaderCellDef> Price  </th>
+            <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+          </ng-container>      
+        <ng-container matColumnDef="Amount">
+          <th mat-header-cell *matHeaderCellDef> Amount  </th>
+          <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <hr>
+    <div class="tax-discount">
+    <div class="tax">
+    <h2>GST</h2>
+    <div>
+        <p>{{gst}}%</p>
+    </div>
+    </div>
+    <div class="discount">
+        <h2>Discount</h2>
+        <div>
+            <p>{{discount}}%</p>
+        </div>
+    </div>
+    <div>
+    <div class="amount">
+        <h2>Total Amount : INR {{totalAmount}}</h2>
+    </div>
+    <div class="amount">
+        <h2>Final Amount : INR {{finalAmount}}</h2>
+    </div>
+</div>
+</div>
+<hr>
+<div style="text-align: center;">
+<button mat-raised-button color="primary" (click)="downloadAsPDF()">Generate Bill</button>    
+</div>
+</mat-card>
+</div>
