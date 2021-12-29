@@ -1,0 +1,19 @@
+.dialog{
+    display: flex;
+  flex-direction: column;
+}
+.mat-dialog-title{
+    text-align: center;
+}
+
+  .mat-form-field {
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 14px;
+    flex-grow: 1;
+    width: 75%;
+  }
+
+  .mat-dialog-content{
+    text-align: center;
+  }

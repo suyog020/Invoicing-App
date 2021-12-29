@@ -1,0 +1,20 @@
+<div class="dialog">
+    <h2 mat-dialog-title>Update Invoice</h2>
+    <form class="mat-dialog-content">
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Amount</mat-label>
+            <input required name="amount" [(ngModel)]="data.amount" type="text" matInput>
+        </mat-form-field>
+        <mat-form-field class="full-width" appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-select placeholder="Select status" [(value)]="data.status">
+                <mat-option value="Paid">Paid</mat-option>
+                <mat-option value="Pending">Pending</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="mt" style="margin-bottom: 30px;">
+            <button type="submit" mat-raised-button (click)="onSubmit()" color="primary">Update Customer</button>
+            <button style="margin-left:10px;" mat-raised-button (click)="onNoClick()" tabindex="-1" color="accent">Cancel</button>
+        </div>
+    </form>
+</div>
